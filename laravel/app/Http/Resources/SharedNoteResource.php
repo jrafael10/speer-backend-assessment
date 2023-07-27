@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class NoteResource extends JsonResource
+class SharedNoteResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,12 +16,14 @@ class NoteResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'title' => $this->title,
-            'summary' => $this->summary,
-            'content' => $this->content,
-            'author' =>[
-                    'id' =>  $this->user->id,
-                    'name' =>  $this->user->name
+            'note' => [
+                'title' => $this->note->title,
+                'summary' => $this->note->summary,
+                'content' => $this->note->content,
+            ],
+            'user' => [
+                'id' => $this->user->id,
+                'name' => $this->user->name
             ]
 
         ];

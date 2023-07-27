@@ -7,6 +7,7 @@ use App\Http\Requests\StoreNoteRequest;
 use App\Http\Resources\NoteResource;
 use App\Models\Note;
 
+use App\Models\SharedNote;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -43,6 +44,17 @@ class NoteController extends Controller
 
         return response()->noContent();
     }
+
+    public function searchByKeyword(Request $request)
+    {
+        $queryValue = $request->query('q');
+        $searchedNotes = Note::where("title", 'like' , "%$queryValue%")
+                 ->orWhere('summary','like' , "%$queryValue%")
+                 ->orWhere('content', 'like', "%$queryValue%")
+                 ->get();
+        return $searchedNotes;
+    }
+
 
 
 
