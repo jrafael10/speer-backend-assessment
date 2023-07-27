@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('summary');
             $table->text('content');
             $table->foreignId('author')->references('id')->on('users');
+            $table->timestamps();
+
 
 
         });

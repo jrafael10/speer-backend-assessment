@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Note extends Model
 {
     use HasFactory;
-    protected $fillable = ['author', 'shared_ro'];
+    protected $fillable = ['title', 'summary', 'content', 'author', 'updated_at', 'created_at'];
 }

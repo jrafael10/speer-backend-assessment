@@ -25,6 +25,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('auth/signup', [RegisterController::class, '__invoke']);
 Route::post('auth/login', [LoginController::class, '__invoke']);
 
+Route::middleware('auth:sanctum')->group(function () {
 
-Route::get('notes', [NoteController::class, 'index']);
+    Route::apiResource('notes', NoteController::class);
+});
+
 
