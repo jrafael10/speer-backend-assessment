@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\LoginController;
+use App\Http\Controllers\Api\Auth\RegisterController;
+use App\Http\Controllers\Api\NoteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers;
+use App\Http\Controllers\Api;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('notes', 'App\Http\Controllers\Api\NoteController@index');
+Route::post('auth/signup', [RegisterController::class, '__invoke']);
+Route::post('auth/login', [LoginController::class, '__invoke']);
+
+
+Route::get('notes', [NoteController::class, 'index']);
+
