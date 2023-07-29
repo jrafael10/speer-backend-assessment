@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\SharedNoteResource;
 use App\Models\Note;
 use App\Models\SharedNote;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SharedNoteController extends Controller

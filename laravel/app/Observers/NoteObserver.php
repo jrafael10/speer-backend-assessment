@@ -11,7 +11,18 @@ class NoteObserver
         if (auth()->check()) {
             $note->author = auth()->id();
         }
+
     }
+
+    public function updating(Note $note)
+    {
+        if (auth()->check()) {
+            $note->author = auth()->id();
+        }
+
+    }
+
+
     /**
      * Handle the Note "created" event.
      */
@@ -25,7 +36,8 @@ class NoteObserver
      */
     public function updated(Note $note): void
     {
-        //
+
+
     }
 
     /**

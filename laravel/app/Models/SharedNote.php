@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,6 +10,7 @@ class SharedNote extends Model
 {
     use HasFactory;
     protected $fillable = ['note_id', 'user_id'];
+
 
     public function note()
     {
@@ -19,6 +21,8 @@ class SharedNote extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
 
 
 
