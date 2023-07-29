@@ -25,7 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('auth/signup', [RegisterController::class, '__invoke']);
 Route::post('auth/login', [LoginController::class, '__invoke']);
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum', 'throttle:100,1'] )->group(function () {
     Route::post('notes/{note}/share', [Api\SharedNoteController::class, 'store']);
     Route::get('/search', [NoteController::class, 'searchByKeyword']);
     Route::apiResource('notes', NoteController::class);
