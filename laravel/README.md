@@ -1,25 +1,29 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+## WHY LARAVEL?
+<p>As a developer with experience working with PHP and MySQL, I choose Laravel as the framework for building the RESTful API for this assessment. 
+Laravel has built-in features that ease the development of API in the backend, and it also follows the MVC pattern, making the code base for this project organized and modular.
+For example, the logic of each endpoint that implements the CRUD system for this assessment is written in a controller file, while the logic that is used to handle the data passed from
+the database is written in model files. Each table from the database is represented by a model in this code base and the models are in <i><b>app/Models</b></i> directory. In addition, the routing of the
+API endpoints and the implementation of authentication system  is written in a separate file, <i><b>app/routes/api.php</b></i>. Overall, Laravel has the tools and features I need to complete the technical
+requirements for this assessment.
 </p>
 
-## About Laravel
+## Instructions
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<li>Before cloning this project to your local machine, make sure that <a href="https://www.php.net/">PHP</a> and <a href="https://getcomposer.org/">Composer</a> is installed in your machine.</li>
+<li>After you have installed PHP and Composer, clone this project to your local machine and navigate to "laravel" directory</li>
+<li>Within the project directory, replace the <i>.env.example</i> file with <i>.env file</i>.</li>
+<li>In the .env file, replace the database environment with your own.
+```bash
+DB_CONNECTION=mysql
+DB_HOST={your_host}
+DB_PORT={your_port}
+DB_DATABASE={your_db}
+DB_USERNAME={your_username}
+DB_PASSWORD={your_password}
+```
+</li>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Learning Laravel
 

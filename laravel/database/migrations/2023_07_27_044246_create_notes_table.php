@@ -17,7 +17,11 @@ return new class extends Migration
             $table->string('title');
             $table->text('summary');
             $table->text('content');
-            $table->foreignId('author')->constrained()->references('id')->on('users');
+            $table->foreignId('author')
+                  ->constrained()
+                  ->references('id')
+                  ->on('users');
+
             $table->timestamps();
 
 
