@@ -10,7 +10,7 @@ API endpoints and the implementation of authentication system  is written in a s
 
 - Before cloning this project to your local machine, make sure that <a href="https://www.php.net/">PHP</a>, MySQL and <a href="https://getcomposer.org/">Composer</a>  is installed in your machine. For installation instructions, you can
   refer to this <a href="https://laracasts.com/series/laravel-8-from-scratch/episodes/2">video</a>.
-- After you have installed PHP and Composer, clone this project to your local machine and navigate to "laravel" directory.
+- After you have installed PHP and Composer, clone this project to your local machine.
 - Within the project directory, replace the <i>.env.example</i> file with <i>.env file</i>.
 - In the .env file, replace the database environment with your own.
 
