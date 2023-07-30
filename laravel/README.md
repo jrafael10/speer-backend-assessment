@@ -14,7 +14,7 @@ API endpoints and the implementation of authentication system  is written in a s
 - In the .env file, replace the database environment with your own.
 
 ```
-DB_CONNECTION=mysql or 
+DB_CONNECTION=mysql
 DB_HOST={your_host}
 DB_PORT={your_port}
 DB_DATABASE={your_db}
