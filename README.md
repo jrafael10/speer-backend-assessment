@@ -22,7 +22,7 @@ DB_DATABASE={your_db}
 DB_USERNAME={your_username}
 DB_PASSWORD={your_password}
 ```
-- Run ```php artisan migrate``` within the project directory to run the migrations from <i><b>app/database/migrations</b></i> and populate the database.
+- Run ```php artisan migrate``` within the project directory to run the migrations from <i><b>app/database/migrations</b></i>.
 - Run ```php artisan serve``` to run the project and you can now start testing the API using Postman or any API testing tool of your choice.
 - Run ```php artisan test``` to run the unit tests.
 
