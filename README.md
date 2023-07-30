@@ -1,2 +1,4 @@
 # speer-backend-assessment
- backend assessment for fullstack dev role
+ Backend assessment for fullstack developer role
+
+- After cloning this code, please navigate to laravel directory to see the further instructions.
