@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreSharedNoteRequest;
 use App\Http\Resources\SharedNoteResource;
 use App\Models\Note;
 use App\Models\SharedNote;
@@ -20,7 +21,7 @@ class SharedNoteController extends Controller
             $sharedNote->save();
             return SharedNoteResource::make($sharedNote);
         } catch (\Exception $e){
-            throw new \Exception("Either the note_id or user_id doesn't exist in database");
+            throw new \Exception("It could be the user_id doesn't exist in users table.");
         }
 
 
